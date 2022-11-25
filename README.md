@@ -18,8 +18,11 @@ This Project use the following technologies
 
 To start this project you must follow the next steps:
 - yarn
-- yarn start
-- Install Expo in your phone, after that read the QR code with Expo Camera
+- Install Expo in your phone, and open
+- click on "Enter URL manually" and paste this URL https://expo.dev/accounts/dennisdavidarango/projects/Pokedex/builds/d242a5cd-5996-42da-a7af-219d549d6945
+- Dowload pokedex aplication.
+- On your console write this command: yarn start
+- After that open expo's camera and read the QR Code.
 
 
 
