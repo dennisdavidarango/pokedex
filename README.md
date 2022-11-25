@@ -19,6 +19,7 @@ This Project use the following technologies
 To start this project you must follow the next steps:
 - yarn
 - yarn start
-- Open your Phone and scan the QR to watch the mobile applications
+- Install Expo in your phone, after that read the QR code with Expo Camera
+
 
 
