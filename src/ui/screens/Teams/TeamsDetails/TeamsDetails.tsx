@@ -52,7 +52,7 @@ const TeamsDetails = (props: ITeamsDetails) => {
               <Text
                 style={TeamsStorageStyles.textDetails}
               >
-                {pokemonDetail.name.toLocaleUpperCase()}
+                {pokemonDetail?.name?.toLocaleUpperCase()}
               </Text>
             </View>
             <View
@@ -66,7 +66,7 @@ const TeamsDetails = (props: ITeamsDetails) => {
               <Text
                 style={TeamsStorageStyles.textDetails}
               >
-                {pokemonDetail.id}
+                {pokemonDetail?.id}
               </Text>
             </View>
             <View
@@ -80,7 +80,7 @@ const TeamsDetails = (props: ITeamsDetails) => {
               <Text
                 style={TeamsStorageStyles.textDetails}
               >
-                {pokemonDetail.height}
+                {pokemonDetail?.height}
               </Text>
             </View>
             <View
@@ -94,7 +94,7 @@ const TeamsDetails = (props: ITeamsDetails) => {
               <Text
                 style={TeamsStorageStyles.textDetails}
               >
-                {pokemonDetail.weight}
+                {pokemonDetail?.weight}
               </Text>
             </View>
             <TouchableOpacity
