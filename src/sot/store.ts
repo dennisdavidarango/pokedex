@@ -8,14 +8,13 @@ import regions from './Regions/saga'
 const sagaMiddleware = createSagaMiddleware()
 
 export const store = createStore(
-    rootReducer,
-    composeWithDevTools(applyMiddleware(sagaMiddleware)),
-  )
-  
-  
-  export const persistor = persistStore(store)
+  rootReducer,
+  composeWithDevTools(applyMiddleware(sagaMiddleware)),
+)
 
-  sagaMiddleware.run(regions.getDataRegions)
-  sagaMiddleware.run(regions.getDataMainGenerations)
-  sagaMiddleware.run(regions.getDataPokemonByRegion)
-  sagaMiddleware.run(regions.getDataPokemonDetails)
+export const persistor = persistStore(store)
+
+sagaMiddleware.run(regions.getDataRegions)
+sagaMiddleware.run(regions.getDataMainGenerations)
+sagaMiddleware.run(regions.getDataPokemonByRegion)
+sagaMiddleware.run(regions.getDataPokemonDetails)

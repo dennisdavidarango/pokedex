@@ -1,11 +1,10 @@
-import { IRegionsResult } from "../../../sot/Regions/types"
+import { IRegionsResult } from '../../../sot/Regions/types'
 
 export interface ILocationsProps {
-    navigation: any
-    regions: IRegionsResult[]
-    actions:{
-      getRegions: () => void
-      getMainGeneration: (region: string) => void
-    }
+  navigation: any
+  regions: IRegionsResult[]
+  actions: {
+    getRegions: () => void
+    getMainGeneration: (region: string) => void
   }
-  
+}

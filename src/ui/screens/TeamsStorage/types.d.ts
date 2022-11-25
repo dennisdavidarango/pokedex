@@ -1,20 +1,15 @@
-import { IPokemonSpecies } from "../../../sot/Regions/types"
+import { IPokemonSpecies } from '../../../sot/Regions/types'
 
 export interface ITeamsStorageProps {
-    navigation: any
-  }
-  export interface IAllTeamsData 
-     {
-         id: string,
-         pokemons: string[],
-         teamName: string
-      
-   }
+  navigation: any
+}
+export interface IAllTeamsData {
+  id: string
+  pokemons: string[]
+  teamName: string
+}
 
-   export interface IData{
-    teamName:string
-    pokemons: IPokemonSpecies[]
-  }
-
-   
-
+export interface IData {
+  teamName: string
+  pokemons: IPokemonSpecies[]
+}

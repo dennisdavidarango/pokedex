@@ -29,13 +29,12 @@ const styles = ({ selected, interestColor }: IStylesProps) =>
       backgroundColor: selected ? interestColor : Color.PRIMARY_BUTTON,
     },
     text: {
-        fontWeight: '600',
-        fontSize: Size.SUBHEADER,
-        color: Color.WHITE,
-        paddingLeft: 12,
-        lineHeight: 20.25,
-      },
-   
+      fontWeight: '600',
+      fontSize: Size.SUBHEADER,
+      color: Color.WHITE,
+      paddingLeft: 12,
+      lineHeight: 20.25,
+    },
   })
 
 export { styles }

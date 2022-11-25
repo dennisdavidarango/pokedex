@@ -4,7 +4,6 @@ import { styles } from './styles'
 import { PokemonItemProps } from './types'
 
 const PokemonItem = ({ pokemon, selected, onPress }: PokemonItemProps) => {
-
   return (
     <View style={styles({}).container}>
       <TouchableOpacity style={styles({}).interestView} onPress={onPress}>

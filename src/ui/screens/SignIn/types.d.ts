@@ -1,5 +1,5 @@
-import { ReactElement } from "react";
+import { ReactElement } from 'react'
 
 export interface ISignInProps {
-    googleButton: ReactElement
+  googleButton: ReactElement
 }

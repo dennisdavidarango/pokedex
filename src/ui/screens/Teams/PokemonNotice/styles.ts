@@ -22,6 +22,11 @@ const PokemonNoticeStyles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5,
   },
+  container: {
+    justifyContent: 'center',
+    alignContent: 'center',
+    paddingTop: 10,
+  },
   noticeText: {
     textAlign: 'center',
     lineHeight: 16.9,

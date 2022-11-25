@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add @react-native-firebase/database
+  /usr/local/bin/node /usr/local/bin/yarn add prettier -D --save-exact
 
 PATH: 
   /opt/local/bin:/opt/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/opt/local/bin:/opt/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin
@@ -14,7 +14,7 @@ Platform:
   darwin arm64
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/Users/dennisarango/Desktop/Pokedex/node_modules/@expo-google-fonts/patrick-hand/.prettierrc'
+  Error: EACCES: permission denied, unlink '/Users/dennisarango/Desktop/Pokedex/node_modules/@expo-google-fonts/patrick-hand/index.d.ts'
 
 npm manifest: 
   {

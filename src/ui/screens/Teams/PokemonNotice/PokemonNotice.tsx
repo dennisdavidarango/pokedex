@@ -15,13 +15,7 @@ const PokemonNotice = ({
       onHide={() => setModalVisible(false)}
       containerStyle={PokemonNoticeStyles.noticeView}
     >
-      <View
-        style={{
-          justifyContent: 'center',
-          alignContent: 'center',
-          paddingTop: 10
-        }}
-      >
+      <View style={PokemonNoticeStyles.container}>
         <Text style={PokemonNoticeStyles.noticeText}>{message}</Text>
       </View>
     </Toast>
