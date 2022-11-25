@@ -25,6 +25,16 @@ const TeamsStorageStyles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  deleteContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  touchStyles: {
+    marginEnd: 10,
+    backgroundColor: Color.PRIMARY_BUTTON,
+    padding: 10,
+    borderRadius: 10
+  },
   subHeaderText: {
     fontSize: Size.SUBHEADER,
     fontWeight: '100',
