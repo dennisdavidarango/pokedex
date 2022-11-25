@@ -1,7 +1,10 @@
+import { IPokemonDetails } from "../../ui/screens/Teams/TeamsDetails/types"
+
 export interface RegionsState {
     regions: IRegionsResult[]
     mainGenerations: IAllMainGenerations
-    pokemonByRegion: IPokemonSpecies[]
+    pokemonByRegion: IPokemonSpecies[],
+    pokemonDetail: IPokemonDetails
 }
 
 export interface IRegions {

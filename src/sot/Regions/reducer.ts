@@ -1,5 +1,6 @@
+import { IPokemonDetails } from "../../ui/screens/Teams/TeamsDetails/types"
 import { RegionsActionTypes } from "./actions"
-import { MAIN_GENERATIONS_GET_SUCCESSFULL, POKEMONS_BY_REGION_GET_SUCCESSFULL, REGIONS_GET_SUCCESSFULL } from "./actionTypes"
+import { GET_POKEMON_DETAIL_SUCCESS, MAIN_GENERATIONS_GET_SUCCESSFULL, POKEMONS_BY_REGION_GET_SUCCESSFULL, REGIONS_GET_SUCCESSFULL, RESET_STATE } from "./actionTypes"
 import { IAllMainGenerations, IMainGenerations, RegionsState } from "./types"
 
 
@@ -7,7 +8,8 @@ import { IAllMainGenerations, IMainGenerations, RegionsState } from "./types"
 const initialState: RegionsState = {
     regions: [],
     mainGenerations: {} as IAllMainGenerations,
-    pokemonByRegion: []
+    pokemonByRegion: [],
+    pokemonDetail: {} as IPokemonDetails
 
 }
 
@@ -29,6 +31,18 @@ function homeReducer(state = initialState, action: RegionsActionTypes): RegionsS
       case POKEMONS_BY_REGION_GET_SUCCESSFULL: {
         const newState = { ...state }
         newState.pokemonByRegion = action.pokemonSpecies
+        return newState
+      }
+      case RESET_STATE: {
+        const newState = { ...state }
+        newState.pokemonByRegion = []
+        return newState
+      }
+      case GET_POKEMON_DETAIL_SUCCESS: {
+        const newState = { ...state }
+        newState.pokemonDetail = action.pokemonDetail
+        console.log('Reducer', newState.pokemonDetail.sprites.front_default);
+        
         return newState
       }
 

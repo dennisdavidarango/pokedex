@@ -1,7 +1,8 @@
 import { all, call, put, select, takeEvery } from 'redux-saga/effects'
+import { IPokemonDetails } from '../../ui/screens/Teams/TeamsDetails/types';
 import { fetchWithOptions } from '../fetchOptions';
 import { IAppState } from '../IAppState';
-import { MAIN_GENERATIONS_GET, MAIN_GENERATIONS_GET_SUCCESSFULL, POKEMONS_BY_REGION_GET, POKEMONS_BY_REGION_GET_SUCCESSFULL, REGIONS_GET, REGIONS_GET_SUCCESSFULL } from './actionTypes';
+import { GET_POKEMON_DETAIL, GET_POKEMON_DETAIL_SUCCESS, MAIN_GENERATIONS_GET, MAIN_GENERATIONS_GET_SUCCESSFULL, POKEMONS_BY_REGION_GET, POKEMONS_BY_REGION_GET_SUCCESSFULL, REGIONS_GET, REGIONS_GET_SUCCESSFULL } from './actionTypes';
 import { IAllMainGenerations, IGetAllGeneration, IRegions } from './types';
 
 export function* getRegions() {
@@ -81,11 +82,42 @@ export function* getPokemonByRegion(payload: any) {
   }
 }
 
+export function* getPokemonDetail(payload: any) {
+  try {
+    const URL = `https://pokeapi.co/api/v2/pokemon/${payload.pokemon}`
+
+    const response: { json: () => void; status: number } = yield call(
+      fetchWithOptions,
+      {
+        method: 'GET',
+        headers: {},
+        body: '',
+      },
+      URL,
+    )
+
+    const data: IPokemonDetails = yield call([response, 'json'])
+
+    console.log('sags', data.sprites.front_default);
+
+  yield put({ type: GET_POKEMON_DETAIL_SUCCESS, pokemonDetail: data })
+  
+  } catch (e) {
+   console.log('fallo el regions');
+   
+  }
+}
+
+
+
 
   function* getDataRegions() {
     yield all([takeEvery(REGIONS_GET, getRegions)])
   }
 
+  function* getDataPokemonDetails() {
+    yield all([takeEvery(GET_POKEMON_DETAIL, getPokemonDetail)])
+  }
   function* getDataMainGenerations() {
     yield all([takeEvery(MAIN_GENERATIONS_GET, getMainGenerations)])
   }
@@ -99,5 +131,6 @@ export function* getPokemonByRegion(payload: any) {
   export default {
     getDataRegions,
     getDataMainGenerations,
-    getDataPokemonByRegion
+    getDataPokemonByRegion,
+    getDataPokemonDetails
   }

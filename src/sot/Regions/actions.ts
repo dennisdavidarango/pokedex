@@ -1,4 +1,5 @@
-import { MAIN_GENERATIONS_GET, MAIN_GENERATIONS_GET_SUCCESSFULL, POKEMONS_BY_REGION_GET, POKEMONS_BY_REGION_GET_SUCCESSFULL, REGIONS_GET, REGIONS_GET_SUCCESSFULL } from "./actionTypes"
+import { IPokemonDetails } from "../../ui/screens/Teams/TeamsDetails/types"
+import { GET_POKEMON_DETAIL, GET_POKEMON_DETAIL_SUCCESS, MAIN_GENERATIONS_GET, MAIN_GENERATIONS_GET_SUCCESSFULL, POKEMONS_BY_REGION_GET, POKEMONS_BY_REGION_GET_SUCCESSFULL, REGIONS_GET, REGIONS_GET_SUCCESSFULL, RESET_STATE } from "./actionTypes"
 import { IAllMainGenerations, IMainGenerations, IPokemonSpecies, IRegionsResult } from "./types"
 
 export interface IGetRegions {
@@ -31,6 +32,20 @@ export interface IGetRegions {
     pokemonSpecies: IPokemonSpecies[]
   }
 
+  export interface IResetState {
+    type: typeof RESET_STATE,
+  }
+
+  export interface IGetPokemonDetail {
+    type: typeof GET_POKEMON_DETAIL,
+    pokemon: string,
+  }
+export interface IGetPokemonDetailSuccess {
+    type: typeof GET_POKEMON_DETAIL_SUCCESS,
+    pokemonDetail: IPokemonDetails,
+  }
+
+
 
   export function getRegions(): RegionsActionTypes {
     return {
@@ -52,6 +67,20 @@ export interface IGetRegions {
     }
   }
 
+  export function resetState(): RegionsActionTypes {
+    return {
+      type: RESET_STATE,
+    }
+  }
+
+  export function getPokemonDetail(pokemon: string): RegionsActionTypes {
+    return {
+      type: GET_POKEMON_DETAIL,
+      pokemon,
+    }
+  }
+  
+
   
 
 
@@ -62,4 +91,4 @@ export interface IGetRegions {
     IGetRegionsSuccessfull | 
     IGetMainGenerations | 
     IGetMainGenerationsSuccessfull |
-    IGetPokemonByRegion | IGetPokemonByRegionSuccessfull
+    IGetPokemonByRegion | IGetPokemonByRegionSuccessfull | IResetState | IGetPokemonDetail | IGetPokemonDetailSuccess

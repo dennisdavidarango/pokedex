@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "345746541420",
+    "project_id": "pokedex-d8eca",
+    "storage_bucket": "pokedex-d8eca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345746541420:android:7ae558afb4caf73c188149",
+        "android_client_info": {
+          "package_name": "com.dennisdavidarango.Pokedex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "345746541420-15jnpglit5q83b5d2vrssns90k6n3n71.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dennisdavidarango.Pokedex",
+            "certificate_hash": "dbb07932aa0dfcbb6068d355a7f9cea9321f3212"
+          }
+        },
+        {
+          "client_id": "345746541420-alai74d3hoj8na0j4kagf19l9rti0ve6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dennisdavidarango.Pokedex",
+            "certificate_hash": "a41e1ceff19978936d89f6c04ade10e625e997e2"
+          }
+        },
+        {
+          "client_id": "345746541420-06nhgkv5baags1sqvhoh34jio4sc10g9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGMvVMgezMn8UFXZjYJ68wrZImAipyQ54"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "345746541420-06nhgkv5baags1sqvhoh34jio4sc10g9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

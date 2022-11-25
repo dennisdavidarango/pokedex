@@ -2,6 +2,10 @@
   "expo": {
     "name": "Pokedex",
     "slug": "Pokedex",
+    "plugins": [
+      "@react-native-google-signin/google-signin",
+      "@react-native-firebase/app"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,16 +22,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dennisdavidarango.Pokedex"
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.dennisdavidarango.Pokedex"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a4adf814-3c17-45d8-8d2c-3d2f58933b1e"
+      }
     }
   }
 }

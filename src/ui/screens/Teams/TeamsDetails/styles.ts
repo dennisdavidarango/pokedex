@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native";
-import Color from "../../../res/constants/colors";
-import Size from "../../../res/constants/sizes";
+import Color from "../../../../res/constants/colors";
+import Size from "../../../../res/constants/sizes";
 
-const TeamsStorageStyles = StyleSheet.create({
+
+const TeamsdetailsStyles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: Color.WHITE,
@@ -48,4 +49,4 @@ const TeamsStorageStyles = StyleSheet.create({
 
   });
 
-  export default TeamsStorageStyles
+  export default TeamsdetailsStyles

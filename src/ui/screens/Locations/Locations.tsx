@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { FlatList, Text, Touchable, TouchableOpacity, View } from 'react-native'
+import { FlatList, Image, Text, Touchable, TouchableOpacity, View } from 'react-native'
 import { ILocationsProps } from './types';
 import { Dispatch } from 'redux'
 import Segues from '../../../res/constants/segues';
@@ -9,9 +9,12 @@ import { getMainGeneration, getRegions } from '../../../sot/Regions/actions';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import LocationStyles from './styles';
 
+
 const Location = (props: ILocationsProps) => {
     const {navigation, actions, regions} = props
     const {TEAMS} = Segues.Main 
+
+
 
     useEffect(() => {
       actions.getRegions()
@@ -25,9 +28,11 @@ const Location = (props: ILocationsProps) => {
           ListHeaderComponent={
             <View>
               <View style={LocationStyles.headerContainer}>
+          
                 <Text style={LocationStyles.headerText}>Pokedex</Text>
               </View>
-              <View>
+              <View
+              >
                 <Text style={LocationStyles.subHeaderText}>Select a region</Text>
               </View>
             </View>

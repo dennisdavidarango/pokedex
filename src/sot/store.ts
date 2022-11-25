@@ -18,3 +18,4 @@ export const store = createStore(
   sagaMiddleware.run(regions.getDataRegions)
   sagaMiddleware.run(regions.getDataMainGenerations)
   sagaMiddleware.run(regions.getDataPokemonByRegion)
+  sagaMiddleware.run(regions.getDataPokemonDetails)

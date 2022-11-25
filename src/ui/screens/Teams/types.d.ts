@@ -6,8 +6,14 @@ export interface ITeamsProps {
     id: number,
     pokemons: IPokemonSpecies[]
     actions:{
+      resetState: () => void
       getPokemonsByRegion: (id: number) => void
-      createTeam: (PokemonTeam: IPokemonSpecies[], id: number) => void
+      createTeam: (PokemonTeam: IPokemonSpecies[]) => void
     }
   }
+
+ 
+ 
+ 
+ 
   
